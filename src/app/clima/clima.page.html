@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-card *ngIf="weatherData">
+      <ion-card-header>
+        {{ weatherData.name }}
+      </ion-card-header>
+      <ion-card-content>
+        <p>Temperatura: {{ weatherData.main.temp }}°C</p>
+        <p>Descripción: {{ weatherData.weather[0].description }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>
+
+
